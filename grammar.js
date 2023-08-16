@@ -38,7 +38,10 @@ module.exports = grammar({
       $._start_if,
       optional('NAME='), optional('"'), $.parameter_name, optional('"'), '>',
       repeat($.template),
-      optional(seq('<TMPL_ELSE>', repeat($.template))),
+      optional(seq('<TMPL_ELSE>',
+        optional(seq('NAME=', optional('"'), $.parameter_name, optional('"'))),
+        '>',
+        repeat($.template))),
       $._close_if
     ),
 
