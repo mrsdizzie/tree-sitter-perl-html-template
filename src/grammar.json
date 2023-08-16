@@ -1,5 +1,5 @@
 {
-  "name": "html_template",
+  "name": "perl_html_template",
   "rules": {
     "template": {
       "type": "PREC",
@@ -45,8 +45,16 @@
           "name": "_start_variable"
         },
         {
-          "type": "STRING",
-          "value": "NAME="
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "NAME="
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "CHOICE",
@@ -90,8 +98,16 @@
           "name": "_start_loop"
         },
         {
-          "type": "STRING",
-          "value": "NAME="
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "NAME="
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "CHOICE",
@@ -191,8 +207,16 @@
           "name": "_start_if"
         },
         {
-          "type": "STRING",
-          "value": "NAME="
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "NAME="
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "CHOICE",
@@ -271,8 +295,16 @@
           "name": "_start_unless"
         },
         {
-          "type": "STRING",
-          "value": "NAME="
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "STRING",
+              "value": "NAME="
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
         },
         {
           "type": "CHOICE",

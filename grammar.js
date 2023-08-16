@@ -17,13 +17,13 @@ module.exports = grammar({
 
     variable: $ => seq(
       $._start_variable,
-      'NAME=', optional('"'), $.parameter_name, optional('"'), 
+      optional('NAME='), optional('"'), $.parameter_name, optional('"'), 
       $._close_tag
     ),
 
     loop: $ => seq(
       $._start_loop,
-      'NAME=', optional('"'), $.loop_name, optional('"'), '>',
+      optional('NAME='), optional('"'), $.loop_name, optional('"'), '>',
       repeat($.template),
       $._close_loop
     ),
@@ -36,7 +36,7 @@ module.exports = grammar({
 
     if: $ => seq(
       $._start_if,
-      'NAME=', optional('"'), $.parameter_name, optional('"'), '>',
+      optional('NAME='), optional('"'), $.parameter_name, optional('"'), '>',
       repeat($.template),
       optional(seq('<TMPL_ELSE>', repeat($.template))),
       $._close_if
@@ -44,7 +44,7 @@ module.exports = grammar({
 
     unless: $ => seq(
       $._start_unless,
-      'NAME=', optional('"'), $.parameter_name, optional('"'), '>',
+      optional('NAME='), optional('"'), $.parameter_name, optional('"'), '>',
       repeat($.template),
       $._close_unless
     ),
