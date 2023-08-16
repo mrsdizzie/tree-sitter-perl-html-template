@@ -146,11 +146,19 @@
     "named": false
   },
   {
-    "type": "<TMPL",
+    "type": "/TMPL_IF",
     "named": false
   },
   {
-    "type": "<TMPL_ELSE>",
+    "type": "/TMPL_LOOP",
+    "named": false
+  },
+  {
+    "type": "/TMPL_UNLESS",
+    "named": false
+  },
+  {
+    "type": "<TMPL",
     "named": false
   },
   {
@@ -159,6 +167,30 @@
   },
   {
     "type": "NAME=",
+    "named": false
+  },
+  {
+    "type": "TMPL_ELSE",
+    "named": false
+  },
+  {
+    "type": "TMPL_IF",
+    "named": false
+  },
+  {
+    "type": "TMPL_INCLUDE",
+    "named": false
+  },
+  {
+    "type": "TMPL_LOOP",
+    "named": false
+  },
+  {
+    "type": "TMPL_UNLESS",
+    "named": false
+  },
+  {
+    "type": "TMPL_VAR",
     "named": false
   },
   {
