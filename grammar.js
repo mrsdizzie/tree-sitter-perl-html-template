@@ -1,5 +1,5 @@
 module.exports = grammar({
-  name: 'html_template',
+  name: 'perl_html_template',
 
   extras: $ => [
     /\s/,
